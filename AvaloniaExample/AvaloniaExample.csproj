@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>AvaloniaExample</AssemblyName>
+    <OutputType>exe</OutputType>
+    <PackageId>AvaloniaExample</PackageId>
+    <RuntimeIdentifiers>win7-x64;ubuntu.14.04-x64;osx.10.10-x64</RuntimeIdentifiers>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <OutputTypeEx>winexe</OutputTypeEx>
+    <StartupObject>AvaloniaExample.Program</StartupObject>
+  </PropertyGroup>
+ <PropertyGroup>
+    <NoWarn>$(NoWarn);NU1605</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.xaml;Assets\*" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.5.1" />
+    <PackageReference Include="Avalonia.Skia.Desktop" Version="0.5.1" />
+    <PackageReference Include="Avalonia.Win32" Version="0.5.1" />
+    <PackageReference Include="Avalonia.Gtk3" Version="0.5.1" />
+  </ItemGroup>
+</Project>
